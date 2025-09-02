@@ -93,7 +93,7 @@ class_name = [
 
 # Cure dictionary (add all cures as needed)
 cures = {
-    "Apple Blackrot": "Remove infected fruit and leaves, apply fungicides like captan or thiophanate-methyl.",
+   "Apple Blackrot": "Remove infected fruit and leaves, apply fungicides like captan or thiophanate-methyl.",
     "Apple Cedar Apple Rust": "Use resistant varieties, prune nearby junipers, and apply fungicide sprays.",
     "Apple Healthy": "No issues detected. Maintain regular watering, pruning, and pest control.",
     "Apple Scab": "Remove fallen leaves, apply sulfur-based fungicides.",
@@ -189,8 +189,9 @@ cures = {
     "Tomato Yellow Leaf Curl Virus": "Control whitefly, remove infected plants.",
     "Wheat Healthy": "No issues detected.",
     "Wheat Septoria": "Apply fungicides, rotate crops.",
-    "Wheat Stripe Rust": "Use resistant wheat varieties, apply fungici"
+    "Wheat Stripe Rust": "Use resistant wheat varieties, apply fungicides during early growth."
 }
+
 # ---------------- Pages ----------------
 
 # Home Page
@@ -198,15 +199,14 @@ if app_mode == "Home":
     st.markdown("<h1 style='color:#228B22;'>🌿 Welcome to the Plant Disease Recognition System</h1>", unsafe_allow_html=True)
     st.markdown("""
     <div style='font-size:18px;'>
-    Upload an image of a plant leaf to identify diseases using our AI-powered system.<br>
-    Receive instant predictions and guidance on how to manage the disease.<br><br>
- <b>Why Choose This Application?</b>
-<ul>
-    <li>✅ Utilizes a highly accurate deep learning model for precise disease detection.</li>
-    <li>⚡ Provides rapid and user-friendly analysis for efficient results.</li>
-    <li>🖼️ Features a modern and intuitive interface for seamless user experience.</li>
-</ul>
-
+    Upload a plant leaf image to identify potential diseases using our AI-powered system.<br>
+    Receive instant predictions along with recommendations for effective management.<br><br>
+    <b>Why Choose This Application?</b>
+    <ul>
+        <li>✅ Utilizes a highly accurate deep learning model for precise disease detection.</li>
+        <li>⚡ Provides rapid and user-friendly analysis for efficient results.</li>
+        <li>🖼️ Features a modern and intuitive interface for seamless user experience.</li>
+    </ul>
     <b>Get Started:</b> Select <b>Disease Recognition</b> from the sidebar to begin analysis.
     </div>
     """, unsafe_allow_html=True)
@@ -224,6 +224,3 @@ elif app_mode == "Disease Recognition":
             st.info(f"Confidence: {confidence*100:.2f}%")
             st.warning(f"Cure / Precaution: {cures.get(disease, 'Information not available.')}")
             st.info("📌 Note: Even if the affected plant part varies (leaf, stem, fruit, etc.), the disease and recommended treatment are generally consistent.")
-
-
-
