@@ -190,7 +190,7 @@ cures = {
     "Wheat Healthy": "No issues detected.",
     "Wheat Septoria": "Apply fungicides, rotate crops.",
     "Wheat Stripe Rust": "Use resistant wheat varieties, apply fungici"
-
+}
 # ---------------- Pages ----------------
 
 # Home Page
