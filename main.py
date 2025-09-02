@@ -200,12 +200,13 @@ if app_mode == "Home":
     <div style='font-size:18px;'>
     Upload an image of a plant leaf to identify diseases using our AI-powered system.<br>
     Receive instant predictions and guidance on how to manage the disease.<br><br>
-    <b>Why Choose Us?</b>
-    <ul>
-        <li>✅ Accurate deep learning model</li>
-        <li>⚡ Fast and easy to use</li>
-        <li>🖼️ Modern interface</li>
-    </ul>
+ <b>Why Choose This Application?</b>
+<ul>
+    <li>✅ Utilizes a highly accurate deep learning model for precise disease detection.</li>
+    <li>⚡ Provides rapid and user-friendly analysis for efficient results.</li>
+    <li>🖼️ Features a modern and intuitive interface for seamless user experience.</li>
+</ul>
+
     <b>Get Started:</b> Select <b>Disease Recognition</b> from the sidebar to begin analysis.
     </div>
     """, unsafe_allow_html=True)
