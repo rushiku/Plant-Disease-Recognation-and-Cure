@@ -91,9 +91,9 @@ class_name = [
     "Tomato Target Spot", "Tomato Yellow Leaf Curl Virus", "Wheat Healthy", "Wheat Septoria", "Wheat Stripe Rust"
 ]
 
-# Cure dictionary (add all cures as needed)
+# Cure dictionary
 cures = {
-   "Apple Blackrot": "Remove infected fruit and leaves, apply fungicides like captan or thiophanate-methyl.",
+    "Apple Blackrot": "Remove infected fruit and leaves, apply fungicides like captan or thiophanate-methyl.",
     "Apple Cedar Apple Rust": "Use resistant varieties, prune nearby junipers, and apply fungicide sprays.",
     "Apple Healthy": "No issues detected. Maintain regular watering, pruning, and pest control.",
     "Apple Scab": "Remove fallen leaves, apply sulfur-based fungicides.",
@@ -197,6 +197,7 @@ cures = {
 # Home Page
 if app_mode == "Home":
     st.markdown("<h1 style='color:#228B22;'>🌿 Welcome to the Plant Disease Recognition System</h1>", unsafe_allow_html=True)
+    st.image("home_page.jpeg", use_container_width=True)  # Home page image
     st.markdown("""
     <div style='font-size:18px;'>
     Upload a plant leaf image to identify potential diseases using our AI-powered system.<br>
