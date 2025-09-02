@@ -199,7 +199,7 @@ cures = {
 
 if app_mode == "Home":
     st.markdown("<h1 style='color:#2E8B57; text-align:center;'>🌿 Plant Disease Recognition System</h1>", unsafe_allow_html=True)
-    st.image("home_page.jpeg", use_column_width=True)
+    st.image("home_page.jpeg", use_container_width=True)
 
     st.markdown("<h3 style='color:#228B22;'>Why Use This Application?</h3>", unsafe_allow_html=True)
     
