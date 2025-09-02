@@ -220,7 +220,8 @@ elif app_mode == "Disease Recognition":
     uploaded_file = st.file_uploader("Upload a plant leaf image", type=["jpg","jpeg","png"])
 
     if uploaded_file:
-        st.image(uploaded_file, caption="Uploaded Image", use_column_width=True)
+       st.image("home_page.jpeg", use_container_width=True)
+
 
         if st.button("Predict Disease"):
             pred_idx, confidence = model_prediction(uploaded_file)
