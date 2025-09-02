@@ -217,22 +217,27 @@ if app_mode == "Home":
 
 elif app_mode == "Disease Recognition":
     st.markdown("<h1 style='color:#2E8B57;'>🌱 Disease Recognition</h1>", unsafe_allow_html=True)
-    uploaded_file = st.file_uploader("Upload a plant leaf image", type=["jpg","jpeg","png"])
-
+    
+    # Upload image
+    uploaded_file = st.file_uploader("Upload a plant leaf image", type=["jpg", "jpeg", "png"])
+    
     if uploaded_file:
-       st.image("home_page.jpeg", use_container_width=True)
+        # Show uploaded image preview
+        st.image(uploaded_file, caption="Uploaded Leaf Image", use_container_width=True)
+        
+        # Prediction button
+        if st.button("🔍 Predict Disease"):
+            with st.spinner("Analyzing image..."):
+                pred_idx, confidence = model_prediction(uploaded_file)
+                predicted_disease = class_name[pred_idx]
+                
+                st.success(f"🌱 Prediction: {predicted_disease}")
+                st.info(f"Model confidence: {confidence*100:.2f}%")
+                
+                if predicted_disease in cures:
+                    st.warning(f"💡 Suggested Cure: {cures[predicted_disease]}\n\n"
+                               "📝 Note: Although the affected plant part (leaf, blossom, fruit, stem) may vary, "
+                               "the disease treatment is generally consistent.")
+                else:
+                    st.warning("💡 Cure information not available for this disease.")
 
-
-        if st.button("Predict Disease"):
-            pred_idx, confidence = model_prediction(uploaded_file)
-            disease = class_name[pred_idx]
-
-            st.success(f"**Predicted Disease:** {disease}")
-            st.info(f"**Confidence:** {confidence*100:.2f}%")
-            
-            with st.expander("💡 Cure / Precaution"):
-                st.write(cures.get(disease, "Information not available."))
-                st.write(
-                    "📌 Note: Even if the affected plant part varies (leaf, stem, fruit, etc.), "
-                    "the disease and recommended treatment are generally consistent."
-                )
