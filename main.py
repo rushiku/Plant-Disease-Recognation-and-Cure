@@ -219,25 +219,7 @@ if app_mode == "Home":
     </div>
     """, unsafe_allow_html=True)
 
-# About Page
-elif app_mode == "About":
-    st.markdown("<h1 style='color:#228B22;'>About</h1>", unsafe_allow_html=True)
-    st.markdown("""
-    <div style='font-size:17px;'>
-    <b>Dataset:</b><br>
-    - 88,000+ RGB images of healthy and diseased crop leaves<br>
-    - 97 different classes<br>
-    - 80/20 train-validation split<br>
-    - 33 test images for prediction<br>
-    <br>
-    <b>Model:</b><br>
-    - Trained on 88,327 images<br>
-    - Validated on 25,682 images<br>
-    - Based on <b>ResNet50</b> deep learning architecture<br>
-    <br>
-    <b>Source:</b> <a href="https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset?resource=download" target="_blank">Kaggle Plant Disease Dataset</a>
-    </div>
-    """, unsafe_allow_html=True)
+
 
 # Disease Recognition Page
 elif app_mode == "Disease Recognition":
