@@ -93,7 +93,8 @@ class_name = [
 ]
 
 # Cure / Precaution Suggestions (97 classes)
-    cures = {
+
+cures = {
     "Apple Blackrot": "Remove infected fruit and leaves, apply fungicides like captan or thiophanate-methyl.",
     "Apple Cedar Apple Rust": "Use resistant varieties, prune nearby junipers, and apply fungicide sprays.",
     "Apple Healthy": "No issues detected. Maintain regular watering, pruning, and pest control.",
