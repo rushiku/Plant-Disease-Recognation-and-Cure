@@ -19,7 +19,7 @@ with st.sidebar:
     st.markdown("---")
     app_mode = st.selectbox("📄 Navigate", ["Home", "Disease Recognition"], index=0)
     st.markdown("---")
-    st.info("Developed by Rushikesh Kulkarni 🌿")
+   
 
 # ---------------- Load Model ----------------
 @st.cache_resource
