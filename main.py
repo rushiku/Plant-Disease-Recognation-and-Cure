@@ -244,5 +244,13 @@ elif app_mode == "Disease Recognition":
                         )
                     else:
                         st.warning("💡 Cure information not available for this disease.")
+                        hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
