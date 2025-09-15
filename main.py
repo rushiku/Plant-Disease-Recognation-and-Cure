@@ -244,13 +244,5 @@ elif app_mode == "Disease Recognition":
                         )
                     else:
                         st.warning("💡 Cure information not available for this disease.")
-                        # ---------------- Hide Streamlit Branding ----------------
-hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
-    </style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 
